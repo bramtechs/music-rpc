@@ -1,0 +1,11 @@
+{
+    "players": {
+        "audacious": {
+            "appID": "831324811526406214",
+            "logo": "logo",
+            "Paused": "pause",
+            "Playing": "play",
+            "Stopped": "stop"
+        }
+    }
+}
