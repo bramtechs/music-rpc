@@ -50,8 +50,10 @@ class Session:
         result = ""
         album = utils.execute(self.cmd_prefix + "metadata --format \"{{album}}\"")
         title = utils.execute(self.cmd_prefix + "metadata --format \"{{title}}\"")
-        if len(album) < 16 and len(title) < 16:
-            result = title + " - " + album
+        if len(album) == 0 or len(title) == 0 or len(album) < 16 and len(title) < 16:
+            result = title
+            if len(album) > 0:
+                result += " - " + album
         elif self.side:
             result = title
         else:
