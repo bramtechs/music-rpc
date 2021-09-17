@@ -1,4 +1,4 @@
-
+#!/bin/python
 import utils
 import json
 import session
