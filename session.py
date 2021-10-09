@@ -50,6 +50,11 @@ class Session:
         result = ""
         album = utils.execute(self.cmd_prefix + "metadata --format \"{{album}}\"")
         title = utils.execute(self.cmd_prefix + "metadata --format \"{{title}}\"")
+        
+        # Avoid Unknown album tag on rhythmbox
+        if album == "Unknown":
+            album = ""
+
         if len(album) == 0 or len(title) == 0 or len(album) < 16 and len(title) < 16:
             result = title
             if len(album) > 0:
@@ -61,7 +66,11 @@ class Session:
         return result
 
     def get_song_state(self) -> str:
-        return utils.execute(self.cmd_prefix + "metadata --format \"{{artist}}\"")
+        artist = utils.execute(self.cmd_prefix + "metadata --format \"{{artist}}\"")
+        # Avoid Unknown artist tag on rhythmbox
+        if artist == "Unknown":
+            artist = ""
+        return artist
 
     def get_player_state(self) -> str:
         return utils.execute(self.cmd_prefix + "status")
