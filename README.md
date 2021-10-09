@@ -22,4 +22,8 @@ pip3 install discord_rpc
 ```
 
 ## Screenshots
-![examples](screenshots/examples "examples")
+### Standard
+soon
+
+### Palms
+![examples](screenshots/examples.png "examples")
