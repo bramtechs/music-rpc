@@ -8,7 +8,21 @@
             "Stopped": "stop"
         },
         "cmus": {
+            "appID": "896375344565731369",
+            "logo": "logo",
+            "Paused": "pause",
+            "Playing": "play",
+            "Stopped": "stop"
+        },
+        "sayonara": {
             "appID": "896371831458648094",
+            "logo": "logo",
+            "Paused": "pause",
+            "Playing": "play",
+            "Stopped": "stop"
+        },
+        "rhythmbox": {
+            "appID": "896379851215339570",
             "logo": "logo",
             "Paused": "pause",
             "Playing": "play",
