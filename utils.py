@@ -1,5 +1,5 @@
 import os
-debug_mode = True
+debug_mode = False
 
 def execute(cmd: str) -> str:
     output = os.popen(cmd)

@@ -20,7 +20,7 @@ class Session:
         print("Opening session on player " + player_name)
         self.player_name = player_name
         self.cmd_prefix = "playerctl -p " + self.player_name + " "
-        print("Starting discord session...")
+        print("Starting discord session... " + config["appID"])
         callbacks = {
             'ready': on_ready,
             'disconnected': on_disconnect,
@@ -28,7 +28,7 @@ class Session:
         }
 
         # setup the session with correct settings
-        discord_rpc.initialize(app_id="831324811526406214",
+        discord_rpc.initialize(app_id=config["appID"],
                                callbacks=callbacks,
                                log=True,log_file="discord_log.txt")
         
