@@ -1,7 +1,8 @@
-#!/bin/python
+#!/bin/python3
 import utils
 import json
 import session
+import pidfile
 from time import sleep
 
 busy_session : session.Session = None
@@ -22,20 +23,27 @@ def check_players():
     act_players = utils.execute("playerctl -l").split('\n')
     for player in act_players:
         if player_is_valid(player):
-            busy_session = session.Session(player,config["players"][player])
+            try:
+                busy_session = session.Session(player,config["players"][player])
+            except:
+                print("An error occured, restarting...")
             print("done")
             busy_session = None
             return True
     # no valid player, keep searching
 
 if __name__ == '__main__':
-    print("music-rpc started... " + utils.execute('date'))
+    try:
+        with pidfile.PIDFile():
+            print("music-rpc started... " + utils.execute('date'))
 
-    with open("players.json","r") as json_file:
-        config = json.load(json_file)
-        print (json_file.readlines)
-    print("Loaded config...")
+            with open("players.json","r") as json_file:
+                config = json.load(json_file)
+                print (json_file.readlines)
+            print("Loaded config...")
 
-    while True:
-        check_players()
-        sleep(3)
+            while True:
+                check_players()
+                sleep(3)
+    except pidfile.AlreadyRunningError:
+        print('Already running!')
