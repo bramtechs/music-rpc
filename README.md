@@ -1,14 +1,14 @@
 # music-rpc
 ## One Discord script to rule them all!
 
-This is a simple python script that displays rich-presence of currently playing music on your discord profile.
+music-rpc is a simple python script that displays rich-presence of your music player on your discord profile.
 Currently supported music players are:
 - Audacious
 - Rhythmbox
 - cmus
 - sayonara
 
-This script needs **playerctl** and the pip3 library **discord_rpc**, make sure it is installed!
+This script needs **playerctl** and the pip3 library **discord_rpc**, make sure they're installed!
 
 Ubuntu/Debian
 ```bash
@@ -23,7 +23,7 @@ pip3 install discord_rpc
 
 ## Screenshots
 ### Standard
-soon
+soon™
 
 ### Palms
 ![examples](screenshots/examples.png "examples")
