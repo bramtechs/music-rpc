@@ -8,17 +8,12 @@ Currently supported music players are:
 - cmus
 - sayonara
 
-This script needs **playerctl** and the pip3 library **discord_rpc**, make sure they're installed!
+This script needs **playerctl** and the pip3 library **discord_rpc** in order to function. Make sure they're installed!
 
 Ubuntu/Debian
 ```bash
 sudo apt install playerctl
-pip3 install discord_rpc
-```
-Arch Linux
-```bash
-sudo pacman -S playerctl
-pip3 install discord_rpc
+pip3 install discord-rpc.py
 ```
 
 ## Screenshots
