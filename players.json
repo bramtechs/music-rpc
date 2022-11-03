@@ -27,6 +27,13 @@
             "Paused": "pause",
             "Playing": "play",
             "Stopped": "stop"
+        },
+        "spotify": {
+            "appID": "1037800692900954132",
+            "logo": "logo",
+            "Paused": "pause",
+            "Playing": "play",
+            "Stopped": "stop"
         }
     }
 }

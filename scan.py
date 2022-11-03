@@ -7,7 +7,6 @@ from time import sleep
 busy_session: session.Session = None
 config: dict
 
-
 def player_is_valid(player_name: str) -> bool:
     for player in config["players"]:
         if player_name == player:
