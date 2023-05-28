@@ -1,4 +1,0 @@
-+ ignore album names
-+ logo picking
-+ cleanup -> less playerctl calls
-+ site

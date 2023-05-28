@@ -10,12 +10,23 @@ Currently supported music players are:
 - ...
 - spotify *(don't ask)*
 
-This script needs **playerctl** and the pip3 library **discord_rpc** in order to function. Make sure they're installed!
+This script needs **playerctl** and the pip3 library **discord_rpc.py** in order to function. Make sure they're installed!
 
 Ubuntu/Debian
 ```bash
 sudo apt install playerctl
 pip3 install discord-rpc.py
+python3 ./scan.py
+```
+
+### UPDATE (future Debian):
+Debian has changed the way pip works by forcing you to use virtual environments. Create one with the following commands:
+```bash
+# create a virtual environment with venv
+python3 -m venv ./venv
+./venv/bin/pip3 install discord-rpc.py
+# then run the script with
+./venv/bin/python3 ./scan.py 
 ```
 
 ## Screenshot
