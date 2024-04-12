@@ -19,6 +19,11 @@ pip3 install discord-rpc.py
 python3 ./scan.py
 ```
 
+NixOS
+```bash
+nix-shell
+```
+
 ### UPDATE (future Debian):
 Debian has changed the way pip works by forcing you to use virtual environments. Create one with the following commands:
 ```bash

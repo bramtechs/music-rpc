@@ -1,5 +1,6 @@
 discord_log.txt
 .venv
+.vscode
 venv
 
 # Byte-compiled / optimized / DLL files
