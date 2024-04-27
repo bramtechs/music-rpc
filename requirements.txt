@@ -1,0 +1,1 @@
+discord-rpc.py==5.0
