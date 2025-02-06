@@ -10,6 +10,8 @@ music-rpc is a simple Python script that displays Discord rich-presence for the 
 
 This script needs **playerctl** and the pip3 library **discord_rpc.py** in order to function. Make sure they are installed!
 
+## Manually
+
 Ubuntu/Debian
 ```bash
 sudo apt install playerctl -y
@@ -21,6 +23,15 @@ python3 -m venv ./venv
 NixOS
 ```bash
 nix-shell
+```
+
+## As a user SystemD service
+
+Ensure playerctl is installed.
+
+```
+chmod +x install-systemd-server.sh
+./install-systemd-server.sh
 ```
 
 ## Screenshot
